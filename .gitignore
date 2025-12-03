@@ -1,0 +1,53 @@
+# Build folders
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Tt]emp/
+Debug/
+Release/
+x64/
+x86/
+[Aa][Rr][Mm]*/
+[Bb]uild/
+
+# Visual Studio files
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# .NET generated files
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+*.xml
+*.json.bak
+*.dbmdl
+*.bak
+*.FileListAbsolute.txt
+
+# Publish outputs
+publish/
+dist/
+out/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+.nuget/
+
+# Resharper / Rider / JetBrains
+.idea/
+*.DotSettings.user
+
+# Others
+Thumbs.db
+desktop.ini
+*.swp
+*.DS_Store

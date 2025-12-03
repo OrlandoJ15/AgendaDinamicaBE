@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaHCB", "AgendaHCB\AgendaHCB.csproj", "{6ECF3087-DE7F-437A-9AE5-55ADA2826020}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{4B2F47B1-46D6-494B-865D-4E1B0DA5D50F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{1FE7EABF-EE52-4825-A7F5-4D2697A9F4BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{FB8A8855-1CC5-4A75-804E-969197313397}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonMethods", "CommonMethods\CommonMethods.csproj", "{FD95D715-1E86-4A24-B78E-4373BF10B1C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{D107F4C8-89CC-BEA8-D3D7-CA6B7733353D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6ECF3087-DE7F-437A-9AE5-55ADA2826020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ECF3087-DE7F-437A-9AE5-55ADA2826020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ECF3087-DE7F-437A-9AE5-55ADA2826020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ECF3087-DE7F-437A-9AE5-55ADA2826020}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B2F47B1-46D6-494B-865D-4E1B0DA5D50F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B2F47B1-46D6-494B-865D-4E1B0DA5D50F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B2F47B1-46D6-494B-865D-4E1B0DA5D50F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B2F47B1-46D6-494B-865D-4E1B0DA5D50F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FE7EABF-EE52-4825-A7F5-4D2697A9F4BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FE7EABF-EE52-4825-A7F5-4D2697A9F4BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FE7EABF-EE52-4825-A7F5-4D2697A9F4BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FE7EABF-EE52-4825-A7F5-4D2697A9F4BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB8A8855-1CC5-4A75-804E-969197313397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB8A8855-1CC5-4A75-804E-969197313397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB8A8855-1CC5-4A75-804E-969197313397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB8A8855-1CC5-4A75-804E-969197313397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD95D715-1E86-4A24-B78E-4373BF10B1C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD95D715-1E86-4A24-B78E-4373BF10B1C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD95D715-1E86-4A24-B78E-4373BF10B1C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD95D715-1E86-4A24-B78E-4373BF10B1C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0EFF070A-BA16-461A-8385-6B4DB726A206}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs01:8080/tfs/coleccionasemeco
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AgendaHCB\\AgendaHCB.csproj
+		SccProjectName1 = AgendaHCB
+		SccLocalPath1 = AgendaHCB
+		SccProjectUniqueName2 = BusinessLogic\\BusinessLogic.csproj
+		SccProjectName2 = BusinessLogic
+		SccLocalPath2 = BusinessLogic
+		SccProjectUniqueName3 = CommonMethods\\CommonMethods.csproj
+		SccProjectName3 = CommonMethods
+		SccLocalPath3 = CommonMethods
+		SccProjectUniqueName4 = DataAccess\\DataAccess.csproj
+		SccProjectName4 = DataAccess
+		SccLocalPath4 = DataAccess
+		SccProjectUniqueName5 = Entities\\Entities.csproj
+		SccProjectName5 = Entities
+		SccLocalPath5 = Entities
+	EndGlobalSection
+EndGlobal
