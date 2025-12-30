@@ -1,0 +1,867 @@
+[
+  {
+    "ContainingType": "AgendaHCB.Controllers.CitaController",
+    "Method": "ConsultarKeyAsync",
+    "RelativePath": "api/Cita/ConsultarCitaKeyAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numCita",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgendaHCB.Controllers.CitaController",
+    "Method": "ConsultarExisteEnRangoAsync",
+    "RelativePath": "api/Cita/ConsultarExisteEnRangoAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numAgenda",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "fecInicial",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "fecFinal",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "numTipoAgenda",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "numIntervalo",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgendaHCB.Controllers.CitaController",
+    "Method": "ConsultarRecesosAsync",
+    "RelativePath": "api/Cita/ConsultarRecesosAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idAgendaHorarioDetalle",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgendaHCB.Controllers.CitaController",
+    "Method": "ConsultarPorFecha",
+    "RelativePath": "api/Cita/consultByDate",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numAgenda",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "fecInicial",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "fecFinal",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgendaHCB.Controllers.CitaController",
+    "Method": "ConsultarKey",
+    "RelativePath": "api/Cita/consultByKey",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numAgenda",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "fecInicial",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "fecFinal",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgendaHCB.Controllers.CitaController",
+    "Method": "InsertarCitaPaciente",
+    "RelativePath": "api/Cita/insertarCita",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Entities.Models.InsertarCitaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgendaHCB.Controllers.CitaController",
+    "Method": "NotificaCitaConvenioAsync",
+    "RelativePath": "api/Cita/notificarConvenio",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codInstituc",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numAgenda",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.PacienteController",
+    "Method": "GetRecordByIdentification",
+    "RelativePath": "api/Paciente/ByIdentification",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pidentificacion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pcod_tipdoc",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Entities.Models.Expediente, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.PacienteController",
+    "Method": "GetRecordByName",
+    "RelativePath": "api/Paciente/ByName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "primerNom",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "segundoNom",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "primerAp",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "segundoAp",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Entities.Models.Expediente, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.PacienteController",
+    "Method": "InsertNewRecord",
+    "RelativePath": "api/Paciente/InsertNewRecord",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "expediente",
+        "Type": "Entities.Models.Expediente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.CitaProcedimientoController",
+    "Method": "DelCitaProcedimiento",
+    "RelativePath": "CitaProcedimiento/DelCitaProcedimiento/{numCita}/{codArticulo}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numCita",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "codArticulo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.CitaProcedimientoController",
+    "Method": "InsCitaProcedimiento",
+    "RelativePath": "CitaProcedimiento/InsCitaProcedimiento",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "citaProc",
+        "Type": "Entities.Models.CitaProcedimiento",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.CitaProcedimientoController",
+    "Method": "ModCitaProcedimiento",
+    "RelativePath": "CitaProcedimiento/ModCitaProcedimiento",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "citaProc",
+        "Type": "Entities.Models.CitaProcedimiento",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.CitaProcedimientoController",
+    "Method": "RecCitaProcedimientos",
+    "RelativePath": "CitaProcedimiento/RecCitaProcedimientos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Entities.Models.CitaProcedimiento, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.CitaProcedimientoController",
+    "Method": "RecCitaProcedimientoXId",
+    "RelativePath": "CitaProcedimiento/RecCitaProcedimientoXId/{numCita}/{codArticulo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numCita",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "codArticulo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.CitaReprogramadaController",
+    "Method": "DelCitaReprogramada",
+    "RelativePath": "CitaReprogramada/DelCitaReprogramada/{numCitaReprogramada}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numCitaReprogramada",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.CitaReprogramadaController",
+    "Method": "InsCitaReprogramada",
+    "RelativePath": "CitaReprogramada/InsCitaReprogramada",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cita",
+        "Type": "Entities.Models.CitaReprogramada",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.CitaReprogramadaController",
+    "Method": "ModCitaReprogramada",
+    "RelativePath": "CitaReprogramada/ModCitaReprogramada",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cita",
+        "Type": "Entities.Models.CitaReprogramada",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.CitaReprogramadaController",
+    "Method": "RecCitaReprogramadaXId",
+    "RelativePath": "CitaReprogramada/RecCitaReprogramadaXId/{numCitaReprogramada}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numCitaReprogramada",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.CitaReprogramadaController",
+    "Method": "RecCitasReprogramadas",
+    "RelativePath": "CitaReprogramada/RecCitasReprogramadas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Entities.Models.CitaReprogramada, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.ExpedienteController",
+    "Method": "DelExpediente",
+    "RelativePath": "Expediente/DelExpediente/{numExpediente}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numExpediente",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.ExpedienteController",
+    "Method": "InsExpediente",
+    "RelativePath": "Expediente/InsExpediente",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "expediente",
+        "Type": "Entities.Models.Expediente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.ExpedienteController",
+    "Method": "ModExpediente",
+    "RelativePath": "Expediente/ModExpediente",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "expediente",
+        "Type": "Entities.Models.Expediente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.ExpedienteController",
+    "Method": "RecExpediente",
+    "RelativePath": "Expediente/RecExpediente",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.ExpedienteController",
+    "Method": "RecExpedienteXId",
+    "RelativePath": "Expediente/RecExpedienteXId/{numExpediente}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numExpediente",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.MachoteMensajeController",
+    "Method": "GetAll",
+    "RelativePath": "MachoteMensaje",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.MachoteMensajeController",
+    "Method": "Create",
+    "RelativePath": "MachoteMensaje",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "machote",
+        "Type": "Entities.Models.MachoteMensaje",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.MachoteMensajeController",
+    "Method": "Update",
+    "RelativePath": "MachoteMensaje",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "machote",
+        "Type": "Entities.Models.MachoteMensaje",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.MachoteMensajeController",
+    "Method": "GetById",
+    "RelativePath": "MachoteMensaje/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.MachoteMensajeController",
+    "Method": "Delete",
+    "RelativePath": "MachoteMensaje/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.OperationResultController",
+    "Method": "GetAll",
+    "RelativePath": "OperationResult",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.OperationResultController",
+    "Method": "Create",
+    "RelativePath": "OperationResult",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "result",
+        "Type": "Entities.Models.OperationResult",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.OperationResultController",
+    "Method": "GetByCode",
+    "RelativePath": "OperationResult/{code}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.OperationResultController",
+    "Method": "Delete",
+    "RelativePath": "OperationResult/{code}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.ParamEnvioCorreoController",
+    "Method": "DelParamEnvioCorreo",
+    "RelativePath": "ParamEnvioCorreo/DelParamEnvioCorreo/{compania}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "compania",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.ParamEnvioCorreoController",
+    "Method": "InsParamEnvioCorreo",
+    "RelativePath": "ParamEnvioCorreo/InsParamEnvioCorreo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "param",
+        "Type": "Entities.Models.ParamEnvioCorreo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.ParamEnvioCorreoController",
+    "Method": "ModParamEnvioCorreo",
+    "RelativePath": "ParamEnvioCorreo/ModParamEnvioCorreo",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "param",
+        "Type": "Entities.Models.ParamEnvioCorreo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.ParamEnvioCorreoController",
+    "Method": "RecParamEnvioCorreoXId",
+    "RelativePath": "ParamEnvioCorreo/RecParamEnvioCorreoXId/{compania}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "compania",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.ParamEnvioCorreoController",
+    "Method": "RecParamsEnvioCorreo",
+    "RelativePath": "ParamEnvioCorreo/RecParamsEnvioCorreo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Entities.Models.ParamEnvioCorreo, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.ParamEnvioCorreoAdjuntoController",
+    "Method": "GetAll",
+    "RelativePath": "ParamEnvioCorreoAdjunto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.ParamEnvioCorreoAdjuntoController",
+    "Method": "Create",
+    "RelativePath": "ParamEnvioCorreoAdjunto",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "adjunto",
+        "Type": "Entities.Models.ParamEnvioCorreoAdjunto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.ParamEnvioCorreoAdjuntoController",
+    "Method": "GetByName",
+    "RelativePath": "ParamEnvioCorreoAdjunto/{nombre}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nombre",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.ParamEnvioCorreoAdjuntoController",
+    "Method": "Delete",
+    "RelativePath": "ParamEnvioCorreoAdjunto/{nombre}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nombre",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.ProfesionalController",
+    "Method": "DelProfesional",
+    "RelativePath": "Profesional/DelProfesional/{codProf}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codProf",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.ProfesionalController",
+    "Method": "InsProfesional",
+    "RelativePath": "Profesional/InsProfesional",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "prof",
+        "Type": "Entities.Models.Profesional",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.ProfesionalController",
+    "Method": "ModProfesional",
+    "RelativePath": "Profesional/ModProfesional",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "prof",
+        "Type": "Entities.Models.Profesional",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.ProfesionalController",
+    "Method": "RecProfesionales",
+    "RelativePath": "Profesional/RecProfesionales",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Entities.Models.Profesional, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgenteWebApi.Controllers.ProfesionalController",
+    "Method": "RecProfesionalXCod",
+    "RelativePath": "Profesional/RecProfesionalXCod/{codProf}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codProf",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

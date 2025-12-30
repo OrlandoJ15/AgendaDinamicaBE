@@ -1,0 +1,2301 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "AgendaHCB",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Cita/consultByKey": {
+      "get": {
+        "tags": [
+          "Cita"
+        ],
+        "parameters": [
+          {
+            "name": "numAgenda",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "fecInicial",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "fecFinal",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Cita/consultByDate": {
+      "get": {
+        "tags": [
+          "Cita"
+        ],
+        "parameters": [
+          {
+            "name": "numAgenda",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "fecInicial",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "fecFinal",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Cita/ConsultarRecesosAsync": {
+      "get": {
+        "tags": [
+          "Cita"
+        ],
+        "parameters": [
+          {
+            "name": "idAgendaHorarioDetalle",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Cita/ConsultarCitaKeyAsync": {
+      "get": {
+        "tags": [
+          "Cita"
+        ],
+        "parameters": [
+          {
+            "name": "numCita",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Cita/ConsultarExisteEnRangoAsync": {
+      "get": {
+        "tags": [
+          "Cita"
+        ],
+        "parameters": [
+          {
+            "name": "numAgenda",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "fecInicial",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "fecFinal",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "numTipoAgenda",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "numIntervalo",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Cita/insertarCita": {
+      "post": {
+        "tags": [
+          "Cita"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertarCitaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertarCitaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertarCitaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Cita/notificarConvenio": {
+      "get": {
+        "tags": [
+          "Cita"
+        ],
+        "parameters": [
+          {
+            "name": "codInstituc",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "numAgenda",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/CitaProcedimiento/RecCitaProcedimientos": {
+      "get": {
+        "tags": [
+          "CitaProcedimiento"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CitaProcedimiento"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CitaProcedimiento"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CitaProcedimiento"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CitaProcedimiento/RecCitaProcedimientoXId/{numCita}/{codArticulo}": {
+      "get": {
+        "tags": [
+          "CitaProcedimiento"
+        ],
+        "parameters": [
+          {
+            "name": "numCita",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "codArticulo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/CitaProcedimiento/InsCitaProcedimiento": {
+      "post": {
+        "tags": [
+          "CitaProcedimiento"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CitaProcedimiento"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CitaProcedimiento"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CitaProcedimiento"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/CitaProcedimiento/ModCitaProcedimiento": {
+      "put": {
+        "tags": [
+          "CitaProcedimiento"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CitaProcedimiento"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CitaProcedimiento"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CitaProcedimiento"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/CitaProcedimiento/DelCitaProcedimiento/{numCita}/{codArticulo}": {
+      "delete": {
+        "tags": [
+          "CitaProcedimiento"
+        ],
+        "parameters": [
+          {
+            "name": "numCita",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "codArticulo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/CitaReprogramada/RecCitasReprogramadas": {
+      "get": {
+        "tags": [
+          "CitaReprogramada"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CitaReprogramada"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CitaReprogramada"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CitaReprogramada"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CitaReprogramada/RecCitaReprogramadaXId/{numCitaReprogramada}": {
+      "get": {
+        "tags": [
+          "CitaReprogramada"
+        ],
+        "parameters": [
+          {
+            "name": "numCitaReprogramada",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/CitaReprogramada/InsCitaReprogramada": {
+      "post": {
+        "tags": [
+          "CitaReprogramada"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CitaReprogramada"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CitaReprogramada"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CitaReprogramada"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/CitaReprogramada/ModCitaReprogramada": {
+      "put": {
+        "tags": [
+          "CitaReprogramada"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CitaReprogramada"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CitaReprogramada"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CitaReprogramada"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/CitaReprogramada/DelCitaReprogramada/{numCitaReprogramada}": {
+      "delete": {
+        "tags": [
+          "CitaReprogramada"
+        ],
+        "parameters": [
+          {
+            "name": "numCitaReprogramada",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Expediente/RecExpediente": {
+      "get": {
+        "tags": [
+          "Expediente"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Expediente/RecExpedienteXId/{numExpediente}": {
+      "get": {
+        "tags": [
+          "Expediente"
+        ],
+        "parameters": [
+          {
+            "name": "numExpediente",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Expediente/InsExpediente": {
+      "post": {
+        "tags": [
+          "Expediente"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Expediente"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Expediente"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Expediente"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Expediente/ModExpediente": {
+      "put": {
+        "tags": [
+          "Expediente"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Expediente"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Expediente"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Expediente"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Expediente/DelExpediente/{numExpediente}": {
+      "delete": {
+        "tags": [
+          "Expediente"
+        ],
+        "parameters": [
+          {
+            "name": "numExpediente",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/MachoteMensaje": {
+      "get": {
+        "tags": [
+          "MachoteMensaje"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "MachoteMensaje"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MachoteMensaje"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MachoteMensaje"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MachoteMensaje"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "MachoteMensaje"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MachoteMensaje"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MachoteMensaje"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MachoteMensaje"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/MachoteMensaje/{id}": {
+      "get": {
+        "tags": [
+          "MachoteMensaje"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "MachoteMensaje"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/OperationResult": {
+      "get": {
+        "tags": [
+          "OperationResult"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "OperationResult"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationResult"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationResult"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationResult"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/OperationResult/{code}": {
+      "get": {
+        "tags": [
+          "OperationResult"
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "OperationResult"
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Paciente/ByName": {
+      "get": {
+        "tags": [
+          "Paciente"
+        ],
+        "parameters": [
+          {
+            "name": "primerNom",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "segundoNom",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "primerAp",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "segundoAp",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Expediente"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Expediente"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Expediente"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Paciente/ByIdentification": {
+      "get": {
+        "tags": [
+          "Paciente"
+        ],
+        "parameters": [
+          {
+            "name": "pidentificacion",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pcod_tipdoc",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Expediente"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Expediente"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Expediente"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Paciente/InsertNewRecord": {
+      "post": {
+        "tags": [
+          "Paciente"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Expediente"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Expediente"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Expediente"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ParamEnvioCorreo/RecParamsEnvioCorreo": {
+      "get": {
+        "tags": [
+          "ParamEnvioCorreo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ParamEnvioCorreo"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ParamEnvioCorreo"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ParamEnvioCorreo"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ParamEnvioCorreo/RecParamEnvioCorreoXId/{compania}": {
+      "get": {
+        "tags": [
+          "ParamEnvioCorreo"
+        ],
+        "parameters": [
+          {
+            "name": "compania",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ParamEnvioCorreo/InsParamEnvioCorreo": {
+      "post": {
+        "tags": [
+          "ParamEnvioCorreo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ParamEnvioCorreo"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ParamEnvioCorreo"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ParamEnvioCorreo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ParamEnvioCorreo/ModParamEnvioCorreo": {
+      "put": {
+        "tags": [
+          "ParamEnvioCorreo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ParamEnvioCorreo"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ParamEnvioCorreo"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ParamEnvioCorreo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ParamEnvioCorreo/DelParamEnvioCorreo/{compania}": {
+      "delete": {
+        "tags": [
+          "ParamEnvioCorreo"
+        ],
+        "parameters": [
+          {
+            "name": "compania",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ParamEnvioCorreoAdjunto": {
+      "get": {
+        "tags": [
+          "ParamEnvioCorreoAdjunto"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ParamEnvioCorreoAdjunto"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ParamEnvioCorreoAdjunto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ParamEnvioCorreoAdjunto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ParamEnvioCorreoAdjunto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ParamEnvioCorreoAdjunto/{nombre}": {
+      "get": {
+        "tags": [
+          "ParamEnvioCorreoAdjunto"
+        ],
+        "parameters": [
+          {
+            "name": "nombre",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ParamEnvioCorreoAdjunto"
+        ],
+        "parameters": [
+          {
+            "name": "nombre",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Profesional/RecProfesionales": {
+      "get": {
+        "tags": [
+          "Profesional"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Profesional"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Profesional"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Profesional"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Profesional/RecProfesionalXCod/{codProf}": {
+      "get": {
+        "tags": [
+          "Profesional"
+        ],
+        "parameters": [
+          {
+            "name": "codProf",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Profesional/InsProfesional": {
+      "post": {
+        "tags": [
+          "Profesional"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Profesional"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Profesional"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Profesional"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Profesional/ModProfesional": {
+      "put": {
+        "tags": [
+          "Profesional"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Profesional"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Profesional"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Profesional"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Profesional/DelProfesional/{codProf}": {
+      "delete": {
+        "tags": [
+          "Profesional"
+        ],
+        "parameters": [
+          {
+            "name": "codProf",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Cita": {
+        "type": "object",
+        "properties": {
+          "nuM_CITA": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nuM_AGENDA": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "feC_HORAINICIAL": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "feC_HORAFINAL": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "nuM_TIPOCITA": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "inD_PACIENTERECARGO": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nuM_AGENDACOMPARTIDA": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nuM_EXPEDIENTE": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nuM_ORDSERV": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "noM_PACIENTE": {
+            "type": "string",
+            "nullable": true
+          },
+          "feC_REGISTRA": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usR_REGISTRA": {
+            "type": "string",
+            "nullable": true
+          },
+          "inD_ASISTENCIA": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "feC_ACTUALIZA": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usR_ACTUALIZA": {
+            "type": "string",
+            "nullable": true
+          },
+          "deS_RECARGO": {
+            "type": "string",
+            "nullable": true
+          },
+          "deS_OBSERVACION": {
+            "type": "string",
+            "nullable": true
+          },
+          "inD_REFERENCIAMEDICA": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "coD_PROFREFIERE": {
+            "type": "string",
+            "nullable": true
+          },
+          "deS_REFERENCIA": {
+            "type": "string",
+            "nullable": true
+          },
+          "nuM_CITA_MADRE": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "inD_CONFIRMACION": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "feC_CONFIRMACION": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "deS_CONFIRMACION": {
+            "type": "string",
+            "nullable": true
+          },
+          "usR_CONFIRMACION": {
+            "type": "string",
+            "nullable": true
+          },
+          "horA_PRESENTARSE": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "deS_TIPOPROC": {
+            "type": "string",
+            "nullable": true
+          },
+          "nuM_TIPOPROC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "inD_APLICASEGURO": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "inD_COPAGO": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "inD_DEDUCIBLE": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "inD_COBERTURATOTAL": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "observacioneS_SEGURO": {
+            "type": "string",
+            "nullable": true
+          },
+          "coD_INSTITUC": {
+            "type": "string",
+            "nullable": true
+          },
+          "inD_CITASECUNDARIA": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CitaProcedimiento": {
+        "type": "object",
+        "properties": {
+          "nuM_CITA": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "coD_ARTICULO": {
+            "type": "string",
+            "nullable": true
+          },
+          "deS_DETALLE": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CitaReprogramada": {
+        "type": "object",
+        "properties": {
+          "numCitaReprogramada": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numAgenda": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numCitaAnterior": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "fecCita": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "numNuevaCita": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "fecNuevaCita": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usrRePrograma": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecRePrograma": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Expediente": {
+        "type": "object",
+        "properties": {
+          "numExpediente": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numCarnet": {
+            "type": "string",
+            "nullable": true
+          },
+          "primerAp": {
+            "type": "string",
+            "nullable": true
+          },
+          "segundoAp": {
+            "type": "string",
+            "nullable": true
+          },
+          "primerNom": {
+            "type": "string",
+            "nullable": true
+          },
+          "segundoNom": {
+            "type": "string",
+            "nullable": true
+          },
+          "sexo": {
+            "type": "string",
+            "nullable": true
+          },
+          "codTipDoc": {
+            "type": "string",
+            "nullable": true
+          },
+          "numId": {
+            "type": "string",
+            "nullable": true
+          },
+          "codClase": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecNacimiento": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "telHab": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "telOfic": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "telOpc": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "apartado": {
+            "type": "string",
+            "nullable": true
+          },
+          "direccionHab": {
+            "type": "string",
+            "nullable": true
+          },
+          "codProvincia": {
+            "type": "string",
+            "nullable": true
+          },
+          "codCanton": {
+            "type": "string",
+            "nullable": true
+          },
+          "codDistrito": {
+            "type": "string",
+            "nullable": true
+          },
+          "codBarrio": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecExpediente": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "estadoExp": {
+            "type": "string",
+            "nullable": true
+          },
+          "medico": {
+            "type": "string",
+            "nullable": true
+          },
+          "codMedico": {
+            "type": "string",
+            "nullable": true
+          },
+          "observ": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomPaciente": {
+            "type": "string",
+            "nullable": true
+          },
+          "usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "numVisitas": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "correoElectronico": {
+            "type": "string",
+            "nullable": true
+          },
+          "indDonador": {
+            "type": "string",
+            "nullable": true
+          },
+          "numDonador": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "userActualiza": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecActualiza": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "dscCampoActualizado": {
+            "type": "string",
+            "nullable": true
+          },
+          "codGrupo": {
+            "type": "string",
+            "nullable": true
+          },
+          "codSigno": {
+            "type": "string",
+            "nullable": true
+          },
+          "indFallecido": {
+            "type": "string",
+            "nullable": true
+          },
+          "codTipoTricare": {
+            "type": "string",
+            "nullable": true
+          },
+          "saldoDeducTricare": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "monConsumidoTricare": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "codIdioma": {
+            "type": "string",
+            "nullable": true
+          },
+          "codEtnia": {
+            "type": "string",
+            "nullable": true
+          },
+          "codReligion": {
+            "type": "string",
+            "nullable": true
+          },
+          "numIdAnterior": {
+            "type": "string",
+            "nullable": true
+          },
+          "codProfesion": {
+            "type": "string",
+            "nullable": true
+          },
+          "indConsEnvioInfo": {
+            "type": "string",
+            "nullable": true
+          },
+          "codPaisNac": {
+            "type": "string",
+            "nullable": true
+          },
+          "codCategoriaACSocial": {
+            "type": "string",
+            "nullable": true
+          },
+          "telCelular": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "indOrigen": {
+            "type": "string",
+            "nullable": true
+          },
+          "indVivePais": {
+            "type": "boolean"
+          },
+          "indCronico": {
+            "type": "boolean"
+          },
+          "codPaisVive": {
+            "type": "string",
+            "nullable": true
+          },
+          "codEstadoPaisVive": {
+            "type": "string",
+            "nullable": true
+          },
+          "indPacienteConvenio": {
+            "type": "boolean"
+          },
+          "codConvenio": {
+            "type": "string",
+            "nullable": true
+          },
+          "correoElectronicoFE": {
+            "type": "string",
+            "nullable": true
+          },
+          "indExpedienteTemp": {
+            "type": "string",
+            "nullable": true
+          },
+          "indExtranjero": {
+            "type": "string",
+            "nullable": true
+          },
+          "codHotel": {
+            "type": "string",
+            "nullable": true
+          },
+          "indAfiliadoMiVida": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "codEscolaridad": {
+            "type": "string",
+            "nullable": true
+          },
+          "conocidoComo": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaDefuncion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "estadoCivil": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InsertarCitaRequest": {
+        "type": "object",
+        "properties": {
+          "cita": {
+            "$ref": "#/components/schemas/Cita"
+          },
+          "servicios": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CitaProcedimiento"
+            },
+            "nullable": true
+          },
+          "bitacoraDatosDespues": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MachoteMensaje": {
+        "type": "object",
+        "properties": {
+          "num_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "titulo": {
+            "type": "string",
+            "nullable": true
+          },
+          "des_Mensaje_Correo": {
+            "type": "string",
+            "nullable": true
+          },
+          "des_Mensaje_SMS": {
+            "type": "string",
+            "nullable": true
+          },
+          "ind_Activo": {
+            "type": "string",
+            "nullable": true
+          },
+          "ind_AplicaIngles": {
+            "type": "string",
+            "nullable": true
+          },
+          "correo_ConfirmacionNuevaCita": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OperationResult": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ParamEnvioCorreo": {
+        "type": "object",
+        "properties": {
+          "compañia": {
+            "type": "string",
+            "nullable": true
+          },
+          "direccioN_ENVIO": {
+            "type": "string",
+            "nullable": true
+          },
+          "destino": {
+            "type": "string",
+            "nullable": true
+          },
+          "asunto": {
+            "type": "string",
+            "nullable": true
+          },
+          "mensaje": {
+            "type": "string",
+            "nullable": true
+          },
+          "directorio": {
+            "type": "string",
+            "nullable": true
+          },
+          "eS_HTML": {
+            "type": "string",
+            "nullable": true
+          },
+          "modulo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ParamEnvioCorreoAdjunto": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "contenido": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Profesional": {
+        "type": "object",
+        "properties": {
+          "codProf": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomProf": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "indSic": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipo": {
+            "type": "string",
+            "nullable": true
+          },
+          "codSociedad": {
+            "type": "string",
+            "nullable": true
+          },
+          "codEspec": {
+            "type": "string",
+            "nullable": true
+          },
+          "codGrupo": {
+            "type": "string",
+            "nullable": true
+          },
+          "observ": {
+            "type": "string",
+            "nullable": true
+          },
+          "indMed": {
+            "type": "string",
+            "nullable": true
+          },
+          "noCedula": {
+            "type": "string",
+            "nullable": true
+          },
+          "noTelefono": {
+            "type": "string",
+            "nullable": true
+          },
+          "noCuentaMaster": {
+            "type": "string",
+            "nullable": true
+          },
+          "indAprob": {
+            "type": "string",
+            "nullable": true
+          },
+          "noProve": {
+            "type": "string",
+            "nullable": true
+          },
+          "claveMedica": {
+            "type": "string",
+            "nullable": true
+          },
+          "grupoCxc": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoCxc": {
+            "type": "string",
+            "nullable": true
+          },
+          "horario": {
+            "type": "string",
+            "nullable": true
+          },
+          "codFormaPago": {
+            "type": "string",
+            "nullable": true
+          },
+          "porTarjeta": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "banco": {
+            "type": "string",
+            "nullable": true
+          },
+          "porFijo": {
+            "type": "number",
+            "format": "double"
+          },
+          "noClienteCxc": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoSociedad": {
+            "type": "string",
+            "nullable": true
+          },
+          "numFactura": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "generarFacturas": {
+            "type": "string",
+            "nullable": true
+          },
+          "indCxp": {
+            "type": "string",
+            "nullable": true
+          },
+          "indFacturaProf": {
+            "type": "string",
+            "nullable": true
+          },
+          "indMontoFijo": {
+            "type": "string",
+            "nullable": true
+          },
+          "indUrgencias": {
+            "type": "string",
+            "nullable": true
+          },
+          "usrActualiza": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecActualiza": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "indPagarVacuna": {
+            "type": "string",
+            "nullable": true
+          },
+          "indMedicoIns": {
+            "type": "string",
+            "nullable": true
+          },
+          "correoElectronico": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecNacimiento": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "indExcDescuentoClientePrefe": {
+            "type": "string",
+            "nullable": true
+          },
+          "indCodSalida": {
+            "type": "string",
+            "nullable": true
+          },
+          "canAsistentes": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "indRequiRecetaElectronica": {
+            "type": "string",
+            "nullable": true
+          },
+          "indAplicaRevCredenciales": {
+            "type": "string",
+            "nullable": true
+          },
+          "desAreaTrabajo": {
+            "type": "string",
+            "nullable": true
+          },
+          "indAceptaSeguros": {
+            "type": "boolean"
+          },
+          "indAceptaConvenios": {
+            "type": "boolean"
+          },
+          "desSeguros": {
+            "type": "string",
+            "nullable": true
+          },
+          "numAgendaDirtel": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "fecActualizacionClave": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "indReportaPatologia": {
+            "type": "boolean"
+          },
+          "claveConsultarAgenda": {
+            "type": "string",
+            "nullable": true
+          },
+          "indProfesionalPlanilla": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoColegioProfesional": {
+            "type": "string",
+            "nullable": true
+          },
+          "indSecretario": {
+            "type": "boolean"
+          },
+          "firma": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "enviarEncuestaPacientes": {
+            "type": "string",
+            "nullable": true
+          },
+          "indRealizoCursos": {
+            "type": "boolean"
+          },
+          "indCorreoJustificacion": {
+            "type": "boolean"
+          },
+          "fecCorreoJustificacion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "fecNotificacion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "usrNotificacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "indCenso": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecReplicado": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "ratingActual": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "numTotalRespuestas": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "obsExclusivoDmComentarios": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
